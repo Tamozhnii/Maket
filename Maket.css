@@ -1,0 +1,12 @@
+body {
+  background-color: lightgrey;
+  background-size: cover;
+}
+
+body .new {
+  content: "";
+  width: 200px;
+  height: 3;
+  border: 3px solid black;
+}
+/*# sourceMappingURL=Maket.css.map */
