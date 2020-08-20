@@ -7,6 +7,12 @@ body .new {
   content: "";
   width: 200px;
   height: 3;
-  border: 3px solid black;
+  border: 1px solid sandybrown;
+}
+
+p {
+  font-size: 100px;
+  font-weight: bold;
+  color: grey;
 }
 /*# sourceMappingURL=Maket.css.map */
