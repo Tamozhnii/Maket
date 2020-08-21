@@ -82,19 +82,16 @@ footer {
           flex-direction: column;
 }
 
-.about_us p {
-  word-wrap: break-word;
-  margin-right: 10%;
-  position: absolute;
-  bottom: 0;
-}
-
 .about_us .base {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (auto)[];
+      grid-template-columns: repeat(2, auto);
+  -ms-grid-rows: (auto)[];
+      grid-template-rows: repeat(2, auto);
   gap: 10px;
   margin-bottom: 10px;
 }
@@ -106,7 +103,14 @@ footer {
   position: relative;
 }
 
+.about_us .base .base_item p {
+  word-wrap: break-word;
+  position: absolute;
+  bottom: 0;
+}
+
 .about_us .base .formation {
+  -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
 }
@@ -176,6 +180,10 @@ footer {
 .poesy {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -ms-grid-rows: (auto)[];
+      grid-template-rows: repeat(2, auto);
   gap: 10px;
 }
 
@@ -191,6 +199,7 @@ footer {
   overflow: auto;
   text-align: center;
   font-size: 18px;
+  -ms-grid-row: 1;
       grid-row-start: 1;
   grid-row-end: 3;
   max-height: 66.6666vw;
