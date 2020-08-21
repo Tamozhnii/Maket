@@ -1,109 +1,78 @@
-* {
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background-color: #b7fafa;
   margin: 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
 }
 
-header {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+body main {
+  font-size: 14px;
+}
+
+.container {
+  max-width: 768px;
+  min-width: 320px;
+  margin: 0 auto;
+  height: 100%;
 }
 
 .header-footer {
   width: 100%;
-  height: 10vh;
-  background-color: #afaeae;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  height: 90px;
+  background-color: #C4C4C4;
 }
 
-.header-footer h1 {
-  font-weight: lighter;
+.header-footer p {
+  height: 100%;
+  margin: 0;
+  padding: 35px;
+  text-align: center;
+  font-size: 24px;
 }
 
-.header-footer h2 {
-  font-weight: lighter;
-  font-size: 32px;
+header {
+  margin-bottom: 10px;
 }
 
 footer {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  margin-top: 10px;
 }
 
-main {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-  max-width: 1200px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.poesy {
-  margin: 10px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 2fr 1fr;
-      grid-template-columns: 2fr 1fr;
-  -ms-grid-rows: (auto)[2];
-      grid-template-rows: repeat(2, auto);
-  gap: 10px;
-}
-
-.poesy .poesy-item {
-  background-color: #a3a3ad;
-  color: white;
-  font-size: 16px;
-  line-height: 1.5;
-  padding: 2vh;
-}
-
-.poesy .quote {
-  padding: 3vh 4vh 3vh 3vh;
-  overflow: auto;
-  text-align: center;
-  font-size: 20px;
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  grid-row-end: 3;
-  max-height: calc(100vw*0.6);
-}
-
-.poesy .think,
-.poesy .name {
-  position: relative;
-  padding-top: 50%;
-  padding-bottom: 50%;
-}
-
-.poesy .think p,
-.poesy .name p {
-  position: absolute;
-  bottom: 0;
+@media (min-width: 480px) {
+  main {
+    margin: 0 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  * {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .about_us {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .poesy {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
 }
 
 .about_us {
-  margin: 10px;
+  margin: 10px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,6 +80,13 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.about_us p {
+  word-wrap: break-word;
+  margin-right: 10%;
+  position: absolute;
+  bottom: 0;
 }
 
 .about_us .base {
@@ -119,26 +95,20 @@ main {
           order: 1;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[2];
-      grid-template-columns: repeat(2, auto);
-  -ms-grid-rows: (auto)[2];
-      grid-template-rows: repeat(2, auto);
   gap: 10px;
   margin-bottom: 10px;
 }
 
 .about_us .base .base_item {
-  background-color: lightgray;
-  padding-top: 50%;
-  padding-bottom: 50%;
+  background-color: #E8EBED;
+  height: 155px;
+  padding: 15px;
+  position: relative;
 }
 
 .about_us .base .formation {
-  -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
-  padding-top: 25%;
-  padding-bottom: 25%;
 }
 
 .about_us .second {
@@ -151,65 +121,94 @@ main {
 }
 
 .about_us .second .second_item {
-  padding-top: 20%;
-  padding-bottom: 20%;
+  max-width: calc(50%-10px);
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  height: 155px;
+  padding: 15px;
+  position: relative;
 }
 
 .about_us .second .intro {
-  background-color: #6868ee;
+  background-color: #90BCE8;
   margin-right: 5px;
 }
 
 .about_us .second .staff {
-  background-color: #f7f775;
+  background-color: #FEBF26;
   margin-left: 5px;
 }
 
-.temp {
-  margin: 10px;
+@media (min-width: 480px) {
+  .about_us {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 10px;
+  }
+  .about_us .base {
+    margin-bottom: 0px;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+    max-width: 65.7%;
+  }
+  .about_us .second {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 10px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .about_us .second .intro {
+    margin-right: 0px;
+  }
+  .about_us .second .staff {
+    margin-left: 0px;
+  }
+}
+
+.poesy {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
-  -ms-grid-rows: (auto)[2];
-      grid-template-rows: repeat(2, auto);
   gap: 10px;
 }
 
-.temp .temp_item {
-  background-color: #a8dbad;
+.poesy .poesy-item {
+  background-color: #A2A9B7;
   color: white;
-  font-size: 16px;
   line-height: 1.5;
   padding: 2vh;
 }
 
-.temp .temp1,
-.temp .temp3 {
+.poesy .quote {
+  padding: 3vh 4vh 5vh 2vh;
+  overflow: auto;
+  text-align: center;
+  font-size: 18px;
+      grid-row-start: 1;
+  grid-row-end: 3;
+  max-height: 66.6666vw;
+  min-height: calc(320px*0.675);
+}
+
+.poesy .think,
+.poesy .name {
   position: relative;
-  padding-top: 25%;
+  padding-top: 50%;
   padding-bottom: 50%;
 }
 
-.temp .temp1 p,
-.temp .temp3 p {
+.poesy .think p,
+.poesy .name p {
+  word-wrap: break-word;
   position: absolute;
+  margin-right: 10%;
   bottom: 0;
-}
-
-.temp .temp2 {
-  padding: 3vh 4vh 3vh 3vh;
-  overflow: auto;
-  text-align: center;
-  font-size: 20px;
-  -ms-grid-row: 1;
-      grid-row-start: 1;
-  -ms-grid-column: 2;
-      grid-column-start: 2;
-  grid-row-end: 3;
-  max-height: calc(100vw*0.6);
 }
 /*# sourceMappingURL=Maket.css.map */
