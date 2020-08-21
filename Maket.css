@@ -82,6 +82,13 @@ footer {
           flex-direction: column;
 }
 
+.about_us p {
+  word-wrap: break-word;
+  margin-right: 10%;
+  position: absolute;
+  bottom: 0;
+}
+
 .about_us .base {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -101,12 +108,6 @@ footer {
   height: 155px;
   padding: 15px;
   position: relative;
-}
-
-.about_us .base .base_item p {
-  word-wrap: break-word;
-  position: absolute;
-  bottom: 0;
 }
 
 .about_us .base .formation {
