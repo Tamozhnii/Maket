@@ -614,12 +614,14 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  overflow: hidden;
   white-space: nowrap;
   -webkit-box-flex: 5px;
       -ms-flex-positive: 5px;
           flex-grow: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .messanger .content .massage_date p {

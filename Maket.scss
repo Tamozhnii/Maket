@@ -535,10 +535,11 @@ main {
         .massage_date{
             width: 100%;
             display: flex;
-            flex-wrap: nowrap;
+            // flex-wrap: nowrap;
+            overflow: hidden;
             white-space: nowrap;
             flex-grow: 5px;
-            // justify-content: center;
+            justify-content: center;
             // margin-left: 0;
 
             p{
