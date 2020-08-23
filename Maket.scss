@@ -2,7 +2,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    // line-height: 20px;
 }
 
 body {
@@ -155,6 +156,7 @@ main {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: repeat(2, auto);
     gap: 10px;
+    font-weight: lighter;
 
     .poesy-item {
         background-color: #A2A9B7;
@@ -164,14 +166,19 @@ main {
     }
 
     .quote {
-        padding: 3vh 4vh 5vh 2vh;
+        padding: 1vh 1vh 3vh 1vh;
         overflow: auto;
         text-align: center;
         font-size: 18px;
+        font-weight: lighter;
         grid-row-start: 1;
         grid-row-end: 3;
         max-height: 66.6666vw;
         min-height: calc(320px*0.675);
+
+            @media (min-width: 480px) {
+                padding: 3vh 5vh 6vh 3vh;
+            }
     }
 
     .think,
@@ -209,7 +216,7 @@ main {
             padding: 3vh 4vh 5vh 2vh;
             overflow: auto;
             text-align: center;
-            font-size: 18px;
+            font-size: 14px;
             grid-row-start: 1;
             grid-column-start: 2;
             grid-row-end: 3;
@@ -219,10 +226,15 @@ main {
 
             p {
                 overflow: hidden;
+                // display: inline-block;
+                // align-content: space-between;
+                white-space: nowrap;
+                align-content: space-between;
             }
 
             p:after {
-                content: '..................................................';
+                border: black;
+                content: '......................................................................';
                 display: block;
                 white-space: nowrap;
                 overflow: hidden;
@@ -239,11 +251,13 @@ main {
             }
 
             .first {
-                width: 30%;
+                // width: 50%;
+                // margin-left: 0;
                 text-align: left;
             }
 
             .last {
+                // margin-right: 0;
                 text-align: right;
             }
         }
@@ -278,7 +292,8 @@ main {
                 font-size: 36px;
                 color: red;
                 text-align: center;
-                width: 60px;
+                width: 61px;
+                // height: 61px;
                 margin: auto;
                 top: 50%;
                 left: 50%;
@@ -359,8 +374,8 @@ main {
 
         .but {
             grid-column-start: 1;
-            grid-row-start: 2;
-            grid-row-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
             grid-column-end: 3;
         }
 
@@ -418,4 +433,94 @@ main {
             }
         }
     }
-}
+} //info
+
+.messanger{
+    display: block;
+    position: fixed;
+    z-index: 10;
+    max-width: 700px;
+    min-width: 300px;
+    width: 90%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 80%;
+
+    margin: 110px auto;
+    background: url(https://lh3.googleusercontent.com/proxy/Gtbu4g9If-wmrWRcxW9d8NIllv65Lj15aZk0KJaDNBFwmAsDdR6-7lMXUdK0fQ2FDqp-A_LJfxDhF_m_AmGBv5C-JpgfvovEQMlj_yYrsWlvJfx6xE-b_ciOT_blGqQabBPPNc7if1IzPY5WbD1JUKUNFp5ui-a37j9FOf6fUBsJGehhA4LVgOnpcz8lie_59kQ0qVLGsbM62DQ-yaA44df7WbZ5Ew6NIBzLnL_mQ_NN) no-repeat;
+    background-size:  auto 100%;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+    nav{
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        top: 0;
+        height: 10%;
+        width: 100%;
+        z-index: 11;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.2);
+
+        img{
+            height: 50%;
+            margin: 1em;
+            align-self: center;
+        }
+    }
+
+    .content{
+        overflow: auto;
+        width: 100%;
+        top: 0;
+        height: 75%;
+
+        
+    }
+
+    .input{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 25%;
+        background: rgba(255, 255, 255, 0);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+
+        textarea{
+            display: inline-block;
+            margin: 2vh 5vh 40% 2vh;
+            width: 90%;
+            height: 50%;
+            border-radius: 5px;
+        }
+
+        button{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: auto 10% 2vh 2vh;
+            width: 20%;
+            min-width: 120px;
+            height: 40px;
+            background-color: #0F54B9;
+            border-radius: 30px;
+            border-style: none;
+        }
+
+        button:active{
+            border-style: groove;
+            border-width: 3px;
+        }
+    }
+
+    @media (min-width: 480px) {
+        background-size:  100% 100%;
+        button{
+            right: auto;
+            left: 0;
+        }
+    }
+} /*messanger*/
